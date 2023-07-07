@@ -104,6 +104,69 @@ def stack_menu():
         stack_menu()
 
 
+def linked_list_menu():
+    
+    print("Options")
+    print("")
+    print("1.-Insert data at beggining")
+    print("2.-Insert data at end")
+    print("3.-Insert data after node")
+    print("4.-Delete node")
+    print("5.-Show the list")
+    print("6.-Return")
+
+    options_l = input()
+
+    if options_l == "1":
+        print("Insert the number at the beggining")
+        Lnumber = int(input()) 
+        myLinkedList.insert_at_beginning(Lnumber)
+        
+        print("The number has been added succesfuly")
+        linked_list_menu()
+
+    elif options_l == "2":
+        print("Insert the number at the end")
+        Lnumber = int(input()) 
+        myLinkedList.insert_at_end(Lnumber)
+        print("The number has been added succesfuly")
+        linked_list_menu()
+
+
+    elif options_l == "3":
+       print("Insert after node")
+       print("After what node would you like to add the number?")
+       node = int(input())
+
+       print("What number would you like to add?")
+       Lnumber = input()
+
+       myLinkedList.insert_after_node(node, Lnumber)
+       print("The number has been added succesfuly")
+       linked_list_menu()
+
+
+    elif options_l == "4":
+        print("Delete node")
+        print("What node would you like to delete?") 
+        node = int(input())
+        myLinkedList.delete_node(node)
+        print("The node has been deleted")
+        linked_list_menu()
+
+
+    elif options_l == "5":
+        print("Show the  linked list")
+        myLinkedList.display()
+        linked_list_menu()
+
+    elif options_l == "6":
+        main_menu()
+        
+
+    else:
+        print("Inavalid option")
+        linked_list_menu()
     
     
 while menu_control:

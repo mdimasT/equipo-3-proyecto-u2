@@ -29,6 +29,8 @@ mystack = stack.Stack()
 myLinkedList = linked_list.LinkedList()
 
     
-
+while menu_control:
+     main_menu()
+    
 
  

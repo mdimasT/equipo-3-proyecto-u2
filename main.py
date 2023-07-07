@@ -66,6 +66,44 @@ def queue_menu():
         queue_menu()
 
 
+def stack_menu():
+    
+    print("Options")
+    print("")
+    print("1.-Insert data (push)")
+    print("2.-Delete last number (pop)")
+    print("3.-Show the number on top (Peek)")
+    print("4.-Return")
+
+    options_s = input()
+
+    if options_s == "1":
+        print("Insert five numbers")
+        i = 1
+        while i <= 5:
+            print("Insert the ",i, "number")
+            s_number = input()
+            mystack.push(s_number)
+            i = i + 1
+        print("The numbers have been added succesfuly")
+        stack_menu()
+
+    elif options_s == "2":
+       print(mystack.pop(),"was deleted: ")
+       stack_menu()
+
+    elif options_s == "3":
+       print(mystack.peek())
+       stack_menu()
+
+    elif options_s == "4":
+        main_menu()
+
+    else:
+        print("Inavalid option")
+        stack_menu()
+
+
     
     
 while menu_control:
